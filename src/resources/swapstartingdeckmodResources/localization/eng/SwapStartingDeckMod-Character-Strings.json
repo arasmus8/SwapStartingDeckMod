@@ -1,0 +1,19 @@
+{
+  "swapstartingdeckmod:SwapStartingDeckNeow": {
+    "NAMES": [],
+    "TEXT": [
+      "[ #rTake #r",
+      "[ #rLose #r",
+      "[ #rDraw #r1 #rless #rcard ",
+      "[ #rHealing #ris #rhalf #ras #reffective ",
+      "[ #rMax #rHP #ris #r1 ",
+      "[ #rYou #rtake #rdouble #rdamage ",
+      "[ #rEnemies #rhave #rdouble #rHP ",
+      "[ #rAll #rcards #rare #rEthereal ",
+      " #rdamage ",
+      " #rMax #rHP ",
+      "#gSwap #gyour #gstarting #gdeck.]",
+      "New Starting Deck."
+    ]
+  }
+}

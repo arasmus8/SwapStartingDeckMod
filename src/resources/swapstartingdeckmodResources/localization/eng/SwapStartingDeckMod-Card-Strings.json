@@ -1,0 +1,82 @@
+{
+  "swapstartingdeckmod:Berserker": {
+    "NAME": "Berserker",
+    "DESCRIPTION": "2 Anger NL 2 Twin Strike NL Pummel NL 2 Shrug it Off NL 2 Flex"
+  },
+  "swapstartingdeckmod:Uproar": {
+    "NAME": "Rampage",
+    "DESCRIPTION": "Rampage NL Pommel Strike NL Headbutt NL Shrug it Off NL Battle Trance"
+  },
+  "swapstartingdeckmod:Fortification": {
+    "NAME": "Fortification",
+    "DESCRIPTION": "5 Iron Wave NL 4 Entrench NL Barricade"
+  },
+  "swapstartingdeckmod:Impermanence": {
+    "NAME": "Impermanence",
+    "DESCRIPTION": "3 Carnage NL 3 Ghostly Armor NL Feel no Pain"
+  },
+  "swapstartingdeckmod:Pyromancer": {
+    "NAME": "Pyromancer",
+    "DESCRIPTION": "2 Reckless Strike NL 2 Wild Strike NL 2 Power Through NL 2 Second Wind NL Fire Breathing"
+  },
+  "swapstartingdeckmod:Acrobat": {
+    "NAME": "Acrobat",
+    "DESCRIPTION": "2 Sneaky Strike NL 2 Eviscerate NL Grand Finale NL 2 Acrobatics NL 2 Backflip NL 2 Prepared"
+  },
+  "swapstartingdeckmod:Lacerator": {
+    "NAME": "Lacerator",
+    "DESCRIPTION": "2 Slice NL Choke NL Finisher NL 2 Cloak and Dagger NL 2 Blade Dance NL A Thousand Cuts"
+  },
+  "swapstartingdeckmod:Alchemist": {
+    "NAME": "Alchemist",
+    "DESCRIPTION": "4 Poisoned Stab NL 2 Crippling Poison NL 2 Survivor NL Alchemize"
+  },
+  "swapstartingdeckmod:Strategist": {
+    "NAME": "Strategist",
+    "DESCRIPTION": "Flechettes NL Neutralize NL 2 Heel Hook NL Setup, Escape Plan, Expertise, Reflex, Tactician NL Tools of the Trade"
+  },
+  "swapstartingdeckmod:Ninja": {
+    "NAME": "Ninja",
+    "DESCRIPTION": "5 Quick Slash NL 1 Blur NL 4 Dodge and Roll"
+  },
+  "swapstartingdeckmod:Battery": {
+    "NAME": "Battery",
+    "DESCRIPTION": "2 Meteor Strike NL 2 Streamline NL Recycle NL 3 Double Energy NL Tempest NL Reinforced Body"
+  },
+  "swapstartingdeckmod:IceAge": {
+    "NAME": "Ice Age",
+    "DESCRIPTION": "2 Blizzard NL 2 Cold Snap NL Glacier NL 3 Coolheaded"
+  },
+  "swapstartingdeckmod:Thunderstruck ": {
+    "NAME": "Thunderstruck",
+    "DESCRIPTION": "4 Ball Lightning NL Thunderstrike NL Zap NL Dualcast NL Static Discharge"
+  },
+  "swapstartingdeckmod:RogueAI": {
+    "NAME": "Rogue AI",
+    "DESCRIPTION": "4 Rip and Tear NL Reprogram NL 4 Steam Barrier"
+  },
+  "swapstartingdeckmod:Technology": {
+    "NAME": "Technology",
+    "DESCRIPTION": "4 Compile Driver NL Amplify NL White Noise NL 3 Force Field NL Hello World"
+  },
+  "swapstartingdeckmod:Dancer": {
+    "NAME": "Dancer",
+    "DESCRIPTION": "2 Tantrum NL 2 Fear no Evil NL Meditate NL Simmering Fury NL Mental Fortress"
+  },
+  "swapstartingdeckmod:Visionary": {
+    "NAME": "Visionary",
+    "DESCRIPTION": "4 Threads of Fate NL 4 Third Eye NL Omniscience NL Nirvana"
+  },
+  "swapstartingdeckmod:NorthStar": {
+    "NAME": "North Star",
+    "DESCRIPTION": "5 Pressure Points"
+  },
+  "swapstartingdeckmod:Enlightenment": {
+    "NAME": "Enlightenment",
+    "DESCRIPTION": "Brilliance NL 3 Prostrate NL 3 Pray"
+  },
+  "swapstartingdeckmod:Creation": {
+    "NAME": "Creation",
+    "DESCRIPTION": "4 Carve Reality NL 4 Deceive Reality NL Master Reality"
+  }
+}

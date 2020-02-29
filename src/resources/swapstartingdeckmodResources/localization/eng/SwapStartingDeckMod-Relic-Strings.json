@@ -1,0 +1,16 @@
+{
+  "swapstartingdeckmod:DeadBlossom": {
+    "NAME": "Dead Blossom",
+    "FLAVOR": "All opportunities come with a cost.",
+    "DESCRIPTIONS": [
+      "Healing is half as effective."
+    ]
+  },
+  "swapstartingdeckmod:Bellows": {
+    "NAME": "Bellows",
+    "FLAVOR": "Everything is impermanent.",
+    "DESCRIPTIONS": [
+      "All cards remaining in your hand at the end of turn are exhausted."
+    ]
+  }
+}
