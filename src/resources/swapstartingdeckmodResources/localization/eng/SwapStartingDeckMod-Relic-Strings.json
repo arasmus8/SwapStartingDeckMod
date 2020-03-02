@@ -26,5 +26,12 @@
     "DESCRIPTIONS": [
       "Enemies deal double damage."
     ]
+  },
+  "swapstartingdeckmod:GoldTooth": {
+    "NAME": "Gold Tooth",
+    "FLAVOR": "Shiny.",
+    "DESCRIPTIONS": [
+      "Enemies have double HP."
+    ]
   }
 }

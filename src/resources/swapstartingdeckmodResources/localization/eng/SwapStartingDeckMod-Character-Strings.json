@@ -7,7 +7,7 @@
       "[ #rDraw #r1 #rfewer #rcard ",
       "[ #rHealing #ris #rhalf #ras #reffective ",
       "[ #rMax #rHP #ris #r1 ",
-      "[ #rYou #rtake #rdouble #rdamage ",
+      "[ #rEnemies #rdeal #rdouble #rdamage ",
       "[ #rEnemies #rhave #rdouble #rHP ",
       "[ #rAll #rcards #rare #rEthereal ",
       " #rdamage ",

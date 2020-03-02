@@ -19,9 +19,7 @@ import com.megacrit.cardcrawl.neow.NeowReward;
 import javassist.CtBehavior;
 import swapstartingdeckmod.SwapStartingDeckMod;
 import swapstartingdeckmod.choices.*;
-import swapstartingdeckmod.relics.Bellows;
-import swapstartingdeckmod.relics.CursedMarble;
-import swapstartingdeckmod.relics.DeadBlossom;
+import swapstartingdeckmod.relics.*;
 
 import java.util.ArrayList;
 
@@ -124,21 +122,9 @@ public class NeowPatches {
             } else if (_instance.drawback == SUDDEN_DEATH) {
                 AbstractDungeon.player.decreaseMaxHealth(AbstractDungeon.player.maxHealth - 1);
             } else if (_instance.drawback == DOUBLE_DAMAGE) {
-                if(AbstractDungeon.player.hasBlight(Spear.ID)) {
-                    AbstractDungeon.player.getBlight(Spear.ID).incrementUp();
-                } else {
-                    AbstractBlight spearBlight = new Spear();
-                    AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, spearBlight);
-                }
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new BloodOffering());
             } else if (_instance.drawback == DOUBLE_ENEMY_HP) {
-                if (AbstractDungeon.player.hasBlight(Shield.ID)) {
-                    AbstractDungeon.player.getBlight(Shield.ID).incrementUp();
-                    AbstractDungeon.player.getBlight(Shield.ID).incrementUp();
-                } else {
-                    AbstractBlight shieldBlight = new Shield();
-                    shieldBlight.incrementUp();
-                    AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, shieldBlight);
-                }
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new GoldTooth());
             } else if (_instance.drawback == ETHEREAL_CARDS) {
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new Bellows());
             }

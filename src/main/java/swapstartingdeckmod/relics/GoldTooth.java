@@ -2,18 +2,17 @@ package swapstartingdeckmod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import swapstartingdeckmod.SwapStartingDeckMod;
 
-public class BloodOffering extends CustomRelic {
-    public static final String ID = SwapStartingDeckMod.makeID(BloodOffering.class.getSimpleName());
+public class GoldTooth extends CustomRelic {
+    public static final String ID = SwapStartingDeckMod.makeID(GoldTooth.class.getSimpleName());
 
     private static final Texture IMG;
     private static final Texture OUTLINE;
 
-    public BloodOffering() {
+    public GoldTooth() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
         tips.clear();
         tips.add(new PowerTip(this.name, this.description));
@@ -26,8 +25,8 @@ public class BloodOffering extends CustomRelic {
     }
 
     static {
-        ImageMaster.loadRelicImg("Blood of Gifted", "bloodOfGifted.png");
-        IMG = ImageMaster.getRelicImg("Blood of Gifted");
-        OUTLINE = ImageMaster.getRelicOutlineImg("Blood of Gifted");
+        ImageMaster.loadRelicImg("Gold Tooth", "goldTooth.png");
+        IMG = ImageMaster.getRelicImg("Gold Tooth");
+        OUTLINE = ImageMaster.getRelicOutlineImg("Gold Tooth");
     }
 }
