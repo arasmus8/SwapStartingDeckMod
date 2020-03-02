@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import swapstartingdeckmod.relics.Bellows;
+import swapstartingdeckmod.relics.CursedMarble;
 import swapstartingdeckmod.relics.DeadBlossom;
 import swapstartingdeckmod.util.IDCheckDontTouchPls;
 import swapstartingdeckmod.util.TextureLoader;
@@ -162,10 +163,12 @@ public class SwapStartingDeckMod implements
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new Bellows(), RelicType.SHARED);
+        BaseMod.addRelic(new CursedMarble(), RelicType.SHARED);
         BaseMod.addRelic(new DeadBlossom(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(Bellows.ID);
+        UnlockTracker.markRelicAsSeen(CursedMarble.ID);
         UnlockTracker.markRelicAsSeen(DeadBlossom.ID);
         logger.info("Done adding relics!");
     }

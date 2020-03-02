@@ -12,5 +12,19 @@
     "DESCRIPTIONS": [
       "All cards remaining in your hand at the end of turn are exhausted."
     ]
+  },
+  "swapstartingdeckmod:CursedMarble": {
+    "NAME": "Cursed Marble",
+    "FLAVOR": "Be careful what you wish for.",
+    "DESCRIPTIONS": [
+      "Draw 1 fewer card each turn."
+    ]
+  },
+  "swapstartingdeckmod:BloodOffering": {
+    "NAME": "Blood Offering",
+    "FLAVOR": "Life is pain. Anyone who says otherwise is selling something.",
+    "DESCRIPTIONS": [
+      "Enemies deal double damage."
+    ]
   }
 }

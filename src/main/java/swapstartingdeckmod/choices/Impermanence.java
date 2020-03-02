@@ -1,7 +1,9 @@
 package swapstartingdeckmod.choices;
 
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.red.*;
+import com.megacrit.cardcrawl.cards.red.Carnage;
+import com.megacrit.cardcrawl.cards.red.FeelNoPain;
+import com.megacrit.cardcrawl.cards.red.GhostlyArmor;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -13,7 +15,7 @@ public class Impermanence extends AbstractDeckSwapChoice {
 
     public static final String ID = SwapStartingDeckMod.makeID(Impermanence.class.getSimpleName());
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = "red/skill/entrench";
+    public static final String IMG = "red/skill/ghostly_armor";
 
     public Impermanence() {
         super(ID, IMG, CARD_STRINGS.NAME, CARD_STRINGS.DESCRIPTION);

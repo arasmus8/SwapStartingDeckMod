@@ -28,8 +28,8 @@ public class Berserker extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new TwinStrike());
         masterDeck.addToTop(new TwinStrike());
         masterDeck.addToTop(new Pummel());
-        masterDeck.addToTop(new ShrugItOff());
-        masterDeck.addToTop(new ShrugItOff());
+        masterDeck.addToTop(new Rage());
+        masterDeck.addToTop(new Rage());
         masterDeck.addToTop(new Flex());
         masterDeck.addToTop(new Flex());
     }

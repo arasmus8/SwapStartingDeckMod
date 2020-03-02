@@ -20,6 +20,7 @@ import javassist.CtBehavior;
 import swapstartingdeckmod.SwapStartingDeckMod;
 import swapstartingdeckmod.choices.*;
 import swapstartingdeckmod.relics.Bellows;
+import swapstartingdeckmod.relics.CursedMarble;
 import swapstartingdeckmod.relics.DeadBlossom;
 
 import java.util.ArrayList;
@@ -112,23 +113,17 @@ public class NeowPatches {
             ReflectionHacks.setPrivate(_instance, NeowReward.class, "activated", true);
 
             if (_instance.drawback == LOSE_HALF_LIFE) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 AbstractDungeon.player.damage(new DamageInfo(null, AbstractDungeon.player.currentHealth / 2, DamageInfo.DamageType.HP_LOSS));
             } else if (_instance.drawback == LOSE_QUARTER_MAX_LIFE) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 int maxLifeLoss = (int)((float)AbstractDungeon.player.maxHealth * 0.25F);
                 AbstractDungeon.player.decreaseMaxHealth(maxLifeLoss);
             } else if (_instance.drawback == REDUCE_DRAW) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
-                AbstractDungeon.player.gameHandSize -= 1;
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new CursedMarble());
             } else if (_instance.drawback == REDUCE_HEALING) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new DeadBlossom());
             } else if (_instance.drawback == SUDDEN_DEATH) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 AbstractDungeon.player.decreaseMaxHealth(AbstractDungeon.player.maxHealth - 1);
             } else if (_instance.drawback == DOUBLE_DAMAGE) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 if(AbstractDungeon.player.hasBlight(Spear.ID)) {
                     AbstractDungeon.player.getBlight(Spear.ID).incrementUp();
                 } else {
@@ -136,7 +131,6 @@ public class NeowPatches {
                     AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, spearBlight);
                 }
             } else if (_instance.drawback == DOUBLE_ENEMY_HP) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 if (AbstractDungeon.player.hasBlight(Shield.ID)) {
                     AbstractDungeon.player.getBlight(Shield.ID).incrementUp();
                     AbstractDungeon.player.getBlight(Shield.ID).incrementUp();
@@ -146,7 +140,6 @@ public class NeowPatches {
                     AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, shieldBlight);
                 }
             } else if (_instance.drawback == ETHEREAL_CARDS) {
-                _instance.drawback = NeowReward.NeowRewardDrawback.NONE;
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new Bellows());
             }
 

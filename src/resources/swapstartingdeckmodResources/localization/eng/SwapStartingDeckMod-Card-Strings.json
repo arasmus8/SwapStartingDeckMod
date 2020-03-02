@@ -1,7 +1,7 @@
 {
   "swapstartingdeckmod:Berserker": {
     "NAME": "Berserker",
-    "DESCRIPTION": "2 Anger NL 2 Twin Strike NL Pummel NL 2 Shrug it Off NL 2 Flex"
+    "DESCRIPTION": "2 Anger NL 2 Twin Strike NL Pummel NL 2 Rage NL 2 Flex"
   },
   "swapstartingdeckmod:Uproar": {
     "NAME": "Rampage",
@@ -47,7 +47,7 @@
     "NAME": "Ice Age",
     "DESCRIPTION": "2 Blizzard NL 2 Cold Snap NL Glacier NL 3 Coolheaded"
   },
-  "swapstartingdeckmod:Thunderstruck ": {
+  "swapstartingdeckmod:Thunderstruck": {
     "NAME": "Thunderstruck",
     "DESCRIPTION": "4 Ball Lightning NL Thunderstrike NL Zap NL Dualcast NL Static Discharge"
   },

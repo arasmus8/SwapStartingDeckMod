@@ -4,7 +4,7 @@
     "TEXT": [
       "[ #rTake #r",
       "[ #rLose #r",
-      "[ #rDraw #r1 #rless #rcard ",
+      "[ #rDraw #r1 #rfewer #rcard ",
       "[ #rHealing #ris #rhalf #ras #reffective ",
       "[ #rMax #rHP #ris #r1 ",
       "[ #rYou #rtake #rdouble #rdamage ",
