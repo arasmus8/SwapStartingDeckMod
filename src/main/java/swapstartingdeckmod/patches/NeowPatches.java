@@ -156,7 +156,7 @@ public class NeowPatches {
                         optionLabel = "" + NEOW_TEXT[6];
                         break;
                     default:
-                        drawback = ETHEREAL_CARDS;
+                        drawback = REDUCE_DRAW;
                         optionLabel = "" + NEOW_TEXT[7];
                 }
             } else {
@@ -172,7 +172,7 @@ public class NeowPatches {
                         optionLabel = "" + NEOW_TEXT[1]  + maxLifeLoss + NEOW_TEXT[9];
                         break;
                     case 2:
-                        drawback = REDUCE_DRAW;
+                        drawback = ETHEREAL_CARDS;
                         optionLabel = "" + NEOW_TEXT[2];
                         break;
                     default:

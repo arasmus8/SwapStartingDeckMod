@@ -14,7 +14,7 @@ public class CursedMarble extends CustomRelic {
     private static final Texture OUTLINE;
 
     public CursedMarble() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
         tips.clear();
         tips.add(new PowerTip(this.name, this.description));
         initializeTips();

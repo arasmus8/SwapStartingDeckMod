@@ -14,7 +14,7 @@ public class BloodOffering extends CustomRelic {
     private static final Texture OUTLINE;
 
     public BloodOffering() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.HEAVY);
         tips.clear();
         tips.add(new PowerTip(this.name, this.description));
         initializeTips();

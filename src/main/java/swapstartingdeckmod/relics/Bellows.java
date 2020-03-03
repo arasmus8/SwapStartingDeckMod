@@ -15,7 +15,7 @@ public class Bellows extends CustomRelic {
     private static final Texture OUTLINE;
 
     public Bellows() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
         tips.clear();
         tips.add(new PowerTip(this.name, this.description));
         initializeTips();
