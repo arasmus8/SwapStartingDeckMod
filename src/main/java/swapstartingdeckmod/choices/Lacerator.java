@@ -25,12 +25,13 @@ public class Lacerator extends AbstractDeckSwapChoice {
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new Slice());
         masterDeck.addToTop(new Slice());
-        masterDeck.addToTop(new Choke());
+        masterDeck.addToTop(new Slice());
+        masterDeck.addToTop(new Slice());
         masterDeck.addToTop(new Finisher());
         masterDeck.addToTop(new CloakAndDagger());
         masterDeck.addToTop(new CloakAndDagger());
+        masterDeck.addToTop(new CloakAndDagger());
+        masterDeck.addToTop(new CloakAndDagger());
         masterDeck.addToTop(new BladeDance());
-        masterDeck.addToTop(new BladeDance());
-        masterDeck.addToTop(new AThousandCuts());
     }
 }

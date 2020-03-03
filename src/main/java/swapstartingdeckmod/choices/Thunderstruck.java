@@ -28,8 +28,10 @@ public class Thunderstruck extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new BallLightning());
         masterDeck.addToTop(new BallLightning());
         masterDeck.addToTop(new ThunderStrike());
+        masterDeck.addToTop(new Stack());
+        masterDeck.addToTop(new Stack());
+        masterDeck.addToTop(new Stack());
+        masterDeck.addToTop(new Stack());
         masterDeck.addToTop(new Zap());
-        masterDeck.addToTop(new Dualcast());
-        masterDeck.addToTop(new StaticDischarge());
     }
 }

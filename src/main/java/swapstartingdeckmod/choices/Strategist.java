@@ -23,15 +23,15 @@ public class Strategist extends AbstractDeckSwapChoice {
     public void onChoseThisOption() {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
+        masterDeck.addToTop(new Predator());
         masterDeck.addToTop(new Flechettes());
-        masterDeck.addToTop(new Neutralize());
-        masterDeck.addToTop(new HeelHook());
-        masterDeck.addToTop(new HeelHook());
-        masterDeck.addToTop(new Setup());
+        masterDeck.addToTop(new Flechettes());
+        masterDeck.addToTop(new Flechettes());
         masterDeck.addToTop(new EscapePlan());
-        masterDeck.addToTop(new Expertise());
-        masterDeck.addToTop(new Reflex());
-        masterDeck.addToTop(new Tactician());
-        masterDeck.addToTop(new ToolsOfTheTrade());
+        masterDeck.addToTop(new EscapePlan());
+        masterDeck.addToTop(new EscapePlan());
+        masterDeck.addToTop(new EscapePlan());
+        masterDeck.addToTop(new Setup());
+        masterDeck.addToTop(new LegSweep());
     }
 }

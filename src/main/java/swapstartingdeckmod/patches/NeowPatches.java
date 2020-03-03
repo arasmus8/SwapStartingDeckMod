@@ -3,9 +3,6 @@ package swapstartingdeckmod.patches;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.blights.AbstractBlight;
-import com.megacrit.cardcrawl.blights.Shield;
-import com.megacrit.cardcrawl.blights.Spear;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,6 +19,8 @@ import swapstartingdeckmod.choices.*;
 import swapstartingdeckmod.relics.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
 import static swapstartingdeckmod.patches.CustomNeowRewardDrawback.*;
 import static swapstartingdeckmod.patches.CustomNeowRewardType.SWAP_STARTING_DECK;
@@ -90,7 +89,7 @@ public class NeowPatches {
                     choices.add(new IceAge());
                     choices.add(new Thunderstruck());
                     choices.add(new RogueAI());
-                    choices.add(new Technology());
+                    choices.add(new Technologist());
                     break;
                 case PURPLE:
                     choices.add(new Dancer());
@@ -100,7 +99,10 @@ public class NeowPatches {
                     choices.add(new Creation());
                     break;
             }
-            return choices;
+            Collections.shuffle(choices);
+            ArrayList<AbstractCard> finalChoices = choices.stream().limit(2).collect(Collectors.toCollection(ArrayList::new));
+            finalChoices.add(new Chaos());
+            return finalChoices;
         }
 
         public static SpireReturn Prefix(NeowReward _instance) {

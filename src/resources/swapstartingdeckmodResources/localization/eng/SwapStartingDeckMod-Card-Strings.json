@@ -1,11 +1,11 @@
 {
   "swapstartingdeckmod:Berserker": {
     "NAME": "Berserker",
-    "DESCRIPTION": "2 Anger NL 2 Twin Strike NL Pummel NL 2 Rage NL 2 Flex"
+    "DESCRIPTION": "Anger NL 4 Twin Strike NL 4 Rage NL Flex"
   },
   "swapstartingdeckmod:Uproar": {
     "NAME": "Rampage",
-    "DESCRIPTION": "Rampage NL Pommel Strike NL Headbutt NL Shrug it Off NL Battle Trance"
+    "DESCRIPTION": "Rampage NL 4 Headbutt NL 4 Shrug it Off NL Battle Trance"
   },
   "swapstartingdeckmod:Fortification": {
     "NAME": "Fortification",
@@ -13,27 +13,27 @@
   },
   "swapstartingdeckmod:Impermanence": {
     "NAME": "Impermanence",
-    "DESCRIPTION": "3 Carnage NL 3 Ghostly Armor NL Feel no Pain"
+    "DESCRIPTION": "4 Carnage NL 5 Ghostly Armor NL Feel no Pain"
   },
   "swapstartingdeckmod:Pyromancer": {
     "NAME": "Pyromancer",
-    "DESCRIPTION": "2 Reckless Strike NL 2 Wild Strike NL 2 Power Through NL 2 Second Wind NL Fire Breathing"
+    "DESCRIPTION": "4 Reckless Strike NL Wild Strike NL 4 Power Through NL Fire Breathing"
   },
   "swapstartingdeckmod:Acrobat": {
     "NAME": "Acrobat",
-    "DESCRIPTION": "2 Sneaky Strike NL 2 Eviscerate NL Grand Finale NL 2 Acrobatics NL 2 Backflip NL 2 Prepared"
+    "DESCRIPTION": "3 Sneaky Strike NL Eviscerate NL Acrobatics NL 4 Backflip NL Prepared"
   },
   "swapstartingdeckmod:Lacerator": {
     "NAME": "Lacerator",
-    "DESCRIPTION": "2 Slice NL Choke NL Finisher NL 2 Cloak and Dagger NL 2 Blade Dance NL A Thousand Cuts"
+    "DESCRIPTION": "4 Slice NL Finisher NL 4 Cloak and Dagger NL Blade Dance"
   },
   "swapstartingdeckmod:Alchemist": {
     "NAME": "Alchemist",
-    "DESCRIPTION": "4 Poisoned Stab NL 2 Crippling Poison NL 2 Survivor NL Alchemize"
+    "DESCRIPTION": "4 Poisoned Stab NL 4 Deflect NL Deadly Poison NL Alchemize"
   },
   "swapstartingdeckmod:Strategist": {
     "NAME": "Strategist",
-    "DESCRIPTION": "Flechettes NL Neutralize NL 2 Heel Hook NL Setup, Escape Plan, Expertise, Reflex, Tactician NL Tools of the Trade"
+    "DESCRIPTION": "Predator NL 3 Flechettes NL 4 Escape Plan NL Setup NL Leg Sweep"
   },
   "swapstartingdeckmod:Ninja": {
     "NAME": "Ninja",
@@ -41,42 +41,46 @@
   },
   "swapstartingdeckmod:Battery": {
     "NAME": "Battery",
-    "DESCRIPTION": "2 Meteor Strike NL 2 Streamline NL Recycle NL 3 Double Energy NL Tempest NL Reinforced Body"
+    "DESCRIPTION": "4 Streamline NL Meteor Strike NL 3 Charge Battery NL Double Energy NL Recycle"
   },
   "swapstartingdeckmod:IceAge": {
     "NAME": "Ice Age",
-    "DESCRIPTION": "2 Blizzard NL 2 Cold Snap NL Glacier NL 3 Coolheaded"
+    "DESCRIPTION": "5 Blizzard NL Chill NL 4 Coolheaded"
   },
   "swapstartingdeckmod:Thunderstruck": {
     "NAME": "Thunderstruck",
-    "DESCRIPTION": "4 Ball Lightning NL Thunderstrike NL Zap NL Dualcast NL Static Discharge"
+    "DESCRIPTION": "4 Ball Lightning NL Thunderstrike NL 4 Stack NL Zap"
   },
   "swapstartingdeckmod:RogueAI": {
     "NAME": "Rogue AI",
-    "DESCRIPTION": "4 Rip and Tear NL Reprogram NL 4 Steam Barrier"
+    "DESCRIPTION": "4 Claw NL Rip and Tear NL Reprogram NL 4 Steam Barrier"
   },
-  "swapstartingdeckmod:Technology": {
-    "NAME": "Technology",
-    "DESCRIPTION": "4 Compile Driver NL Amplify NL White Noise NL 3 Force Field NL Hello World"
+  "swapstartingdeckmod:Technologist": {
+    "NAME": "Technologist",
+    "DESCRIPTION": "4 Rebound NL White Noise NL 4 Force Field NL Hello World"
   },
   "swapstartingdeckmod:Dancer": {
     "NAME": "Dancer",
-    "DESCRIPTION": "2 Tantrum NL 2 Fear no Evil NL Meditate NL Simmering Fury NL Mental Fortress"
+    "DESCRIPTION": "Tantrum NL 4 Consecrate NL Inner Peace NL 3 Halt NL Mental Fortress"
   },
   "swapstartingdeckmod:Visionary": {
     "NAME": "Visionary",
-    "DESCRIPTION": "4 Threads of Fate NL 4 Third Eye NL Omniscience NL Nirvana"
+    "DESCRIPTION": "5 Threads of Fate NL 4 Third Eye NL Nirvana"
   },
   "swapstartingdeckmod:NorthStar": {
     "NAME": "North Star",
-    "DESCRIPTION": "5 Pressure Points"
+    "DESCRIPTION": "Wheel Kick NL 4 Flurry of Blows NL Pressure Points NL 4 Evaluate"
   },
   "swapstartingdeckmod:Enlightenment": {
     "NAME": "Enlightenment",
-    "DESCRIPTION": "Brilliance NL 3 Prostrate NL 3 Pray"
+    "DESCRIPTION": "4 Reach Heaven NL 5 Prostrate NL Pray"
   },
   "swapstartingdeckmod:Creation": {
     "NAME": "Creation",
-    "DESCRIPTION": "4 Carve Reality NL 4 Deceive Reality NL Master Reality"
+    "DESCRIPTION": "5 Carve Reality NL 5 Deceive Reality"
+  },
+  "swapstartingdeckmod:Chaos": {
+    "NAME": "Chaos",
+    "DESCRIPTION": "10 random common cards"
   }
 }

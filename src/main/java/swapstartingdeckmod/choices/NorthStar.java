@@ -23,10 +23,15 @@ public class NorthStar extends AbstractDeckSwapChoice {
     public void onChoseThisOption() {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
+        masterDeck.addToTop(new WheelKick());
+        masterDeck.addToTop(new FlurryOfBlows());
+        masterDeck.addToTop(new FlurryOfBlows());
+        masterDeck.addToTop(new FlurryOfBlows());
+        masterDeck.addToTop(new FlurryOfBlows());
         masterDeck.addToTop(new PressurePoints());
-        masterDeck.addToTop(new PressurePoints());
-        masterDeck.addToTop(new PressurePoints());
-        masterDeck.addToTop(new PressurePoints());
-        masterDeck.addToTop(new PressurePoints());
+        masterDeck.addToTop(new Evaluate());
+        masterDeck.addToTop(new Evaluate());
+        masterDeck.addToTop(new Evaluate());
+        masterDeck.addToTop(new Evaluate());
     }
 }

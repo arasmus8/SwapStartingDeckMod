@@ -23,9 +23,10 @@ public class RogueAI extends AbstractDeckSwapChoice {
     public void onChoseThisOption() {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
-        masterDeck.addToTop(new RipAndTear());
-        masterDeck.addToTop(new RipAndTear());
-        masterDeck.addToTop(new RipAndTear());
+        masterDeck.addToTop(new Claw());
+        masterDeck.addToTop(new Claw());
+        masterDeck.addToTop(new Claw());
+        masterDeck.addToTop(new Claw());
         masterDeck.addToTop(new RipAndTear());
         masterDeck.addToTop(new Reprogram());
         masterDeck.addToTop(new SteamBarrier());

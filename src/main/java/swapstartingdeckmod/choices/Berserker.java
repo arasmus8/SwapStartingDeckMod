@@ -24,13 +24,14 @@ public class Berserker extends AbstractDeckSwapChoice {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new Anger());
-        masterDeck.addToTop(new Anger());
         masterDeck.addToTop(new TwinStrike());
         masterDeck.addToTop(new TwinStrike());
-        masterDeck.addToTop(new Pummel());
+        masterDeck.addToTop(new TwinStrike());
+        masterDeck.addToTop(new TwinStrike());
         masterDeck.addToTop(new Rage());
         masterDeck.addToTop(new Rage());
-        masterDeck.addToTop(new Flex());
+        masterDeck.addToTop(new Rage());
+        masterDeck.addToTop(new Rage());
         masterDeck.addToTop(new Flex());
     }
 }

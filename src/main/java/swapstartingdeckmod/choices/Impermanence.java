@@ -28,6 +28,9 @@ public class Impermanence extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new Carnage());
         masterDeck.addToTop(new Carnage());
         masterDeck.addToTop(new Carnage());
+        masterDeck.addToTop(new Carnage());
+        masterDeck.addToTop(new GhostlyArmor());
+        masterDeck.addToTop(new GhostlyArmor());
         masterDeck.addToTop(new GhostlyArmor());
         masterDeck.addToTop(new GhostlyArmor());
         masterDeck.addToTop(new GhostlyArmor());

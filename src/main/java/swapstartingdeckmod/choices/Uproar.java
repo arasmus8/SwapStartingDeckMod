@@ -24,8 +24,13 @@ public class Uproar extends AbstractDeckSwapChoice {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new Rampage());
-        masterDeck.addToTop(new PommelStrike());
         masterDeck.addToTop(new Headbutt());
+        masterDeck.addToTop(new Headbutt());
+        masterDeck.addToTop(new Headbutt());
+        masterDeck.addToTop(new Headbutt());
+        masterDeck.addToTop(new ShrugItOff());
+        masterDeck.addToTop(new ShrugItOff());
+        masterDeck.addToTop(new ShrugItOff());
         masterDeck.addToTop(new ShrugItOff());
         masterDeck.addToTop(new BattleTrance());
     }

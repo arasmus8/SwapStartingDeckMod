@@ -27,10 +27,11 @@ public class Creation extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new CarveReality());
         masterDeck.addToTop(new CarveReality());
         masterDeck.addToTop(new CarveReality());
+        masterDeck.addToTop(new CarveReality());
         masterDeck.addToTop(new DeceiveReality());
         masterDeck.addToTop(new DeceiveReality());
         masterDeck.addToTop(new DeceiveReality());
         masterDeck.addToTop(new DeceiveReality());
-        masterDeck.addToTop(new MasterReality());
+        masterDeck.addToTop(new DeceiveReality());
     }
 }

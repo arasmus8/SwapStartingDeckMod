@@ -25,12 +25,13 @@ public class Pyromancer extends AbstractDeckSwapChoice {
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new RecklessCharge());
         masterDeck.addToTop(new RecklessCharge());
-        masterDeck.addToTop(new WildStrike());
+        masterDeck.addToTop(new RecklessCharge());
+        masterDeck.addToTop(new RecklessCharge());
         masterDeck.addToTop(new WildStrike());
         masterDeck.addToTop(new PowerThrough());
         masterDeck.addToTop(new PowerThrough());
-        masterDeck.addToTop(new SecondWind());
-        masterDeck.addToTop(new SecondWind());
+        masterDeck.addToTop(new PowerThrough());
+        masterDeck.addToTop(new PowerThrough());
         masterDeck.addToTop(new FireBreathing());
     }
 }

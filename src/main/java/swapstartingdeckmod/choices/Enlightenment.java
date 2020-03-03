@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.purple.Brilliance;
 import com.megacrit.cardcrawl.cards.purple.Pray;
 import com.megacrit.cardcrawl.cards.purple.Prostrate;
+import com.megacrit.cardcrawl.cards.purple.ReachHeaven;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -25,12 +26,15 @@ public class Enlightenment extends AbstractDeckSwapChoice {
     public void onChoseThisOption() {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
-        masterDeck.addToTop(new Brilliance());
+        masterDeck.addToTop(new ReachHeaven());
+        masterDeck.addToTop(new ReachHeaven());
+        masterDeck.addToTop(new ReachHeaven());
+        masterDeck.addToTop(new ReachHeaven());
         masterDeck.addToTop(new Prostrate());
         masterDeck.addToTop(new Prostrate());
         masterDeck.addToTop(new Prostrate());
-        masterDeck.addToTop(new Pray());
-        masterDeck.addToTop(new Pray());
+        masterDeck.addToTop(new Prostrate());
+        masterDeck.addToTop(new Prostrate());
         masterDeck.addToTop(new Pray());
     }
 }

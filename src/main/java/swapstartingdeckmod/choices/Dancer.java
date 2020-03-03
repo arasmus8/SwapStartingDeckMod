@@ -24,11 +24,14 @@ public class Dancer extends AbstractDeckSwapChoice {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new Tantrum());
-        masterDeck.addToTop(new Tantrum());
-        masterDeck.addToTop(new FearNoEvil());
-        masterDeck.addToTop(new FearNoEvil());
-        masterDeck.addToTop(new Meditate());
-        masterDeck.addToTop(new SimmeringFury());
+        masterDeck.addToTop(new Consecrate());
+        masterDeck.addToTop(new Consecrate());
+        masterDeck.addToTop(new Consecrate());
+        masterDeck.addToTop(new Consecrate());
+        masterDeck.addToTop(new InnerPeace());
+        masterDeck.addToTop(new Halt());
+        masterDeck.addToTop(new Halt());
+        masterDeck.addToTop(new Halt());
         masterDeck.addToTop(new MentalFortress());
     }
 }

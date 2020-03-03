@@ -27,10 +27,11 @@ public class Alchemist extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new PoisonedStab());
         masterDeck.addToTop(new PoisonedStab());
         masterDeck.addToTop(new PoisonedStab());
-        masterDeck.addToTop(new CripplingPoison());
-        masterDeck.addToTop(new CripplingPoison());
-        masterDeck.addToTop(new Survivor());
-        masterDeck.addToTop(new Survivor());
+        masterDeck.addToTop(new Deflect());
+        masterDeck.addToTop(new Deflect());
+        masterDeck.addToTop(new Deflect());
+        masterDeck.addToTop(new Deflect());
+        masterDeck.addToTop(new DeadlyPoison());
         masterDeck.addToTop(new Alchemize());
     }
 }

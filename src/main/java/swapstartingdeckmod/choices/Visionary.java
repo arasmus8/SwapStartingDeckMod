@@ -27,11 +27,11 @@ public class Visionary extends AbstractDeckSwapChoice {
         masterDeck.addToTop(new CutThroughFate());
         masterDeck.addToTop(new CutThroughFate());
         masterDeck.addToTop(new CutThroughFate());
+        masterDeck.addToTop(new CutThroughFate());
         masterDeck.addToTop(new ThirdEye());
         masterDeck.addToTop(new ThirdEye());
         masterDeck.addToTop(new ThirdEye());
         masterDeck.addToTop(new ThirdEye());
-        masterDeck.addToTop(new Omniscience());
         masterDeck.addToTop(new Nirvana());
     }
 }

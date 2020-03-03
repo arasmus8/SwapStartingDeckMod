@@ -24,14 +24,14 @@ public class Battery extends AbstractDeckSwapChoice {
         super.onChoseThisOption();
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new MeteorStrike());
-        masterDeck.addToTop(new MeteorStrike());
         masterDeck.addToTop(new Streamline());
         masterDeck.addToTop(new Streamline());
+        masterDeck.addToTop(new Streamline());
+        masterDeck.addToTop(new Streamline());
+        masterDeck.addToTop(new ConserveBattery());
+        masterDeck.addToTop(new ConserveBattery());
+        masterDeck.addToTop(new ConserveBattery());
+        masterDeck.addToTop(new DoubleEnergy());
         masterDeck.addToTop(new Recycle());
-        masterDeck.addToTop(new DoubleEnergy());
-        masterDeck.addToTop(new DoubleEnergy());
-        masterDeck.addToTop(new DoubleEnergy());
-        masterDeck.addToTop(new Tempest());
-        masterDeck.addToTop(new ReinforcedBody());
     }
 }

@@ -25,14 +25,13 @@ public class Acrobat extends AbstractDeckSwapChoice {
         CardGroup masterDeck = AbstractDungeon.player.masterDeck;
         masterDeck.addToTop(new SneakyStrike());
         masterDeck.addToTop(new SneakyStrike());
+        masterDeck.addToTop(new SneakyStrike());
         masterDeck.addToTop(new Eviscerate());
-        masterDeck.addToTop(new Eviscerate());
-        masterDeck.addToTop(new GrandFinale());
-        masterDeck.addToTop(new Acrobatics());
         masterDeck.addToTop(new Acrobatics());
         masterDeck.addToTop(new Backflip());
         masterDeck.addToTop(new Backflip());
-        masterDeck.addToTop(new Prepared());
+        masterDeck.addToTop(new Backflip());
+        masterDeck.addToTop(new Backflip());
         masterDeck.addToTop(new Prepared());
     }
 }
