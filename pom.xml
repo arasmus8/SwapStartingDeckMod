@@ -4,7 +4,7 @@
     <groupId>com.megacrit.cardcrawl.mod</groupId>
     <artifactId>SwapStartingDeckMod</artifactId>
     <name>Swap Starting Deck Mod</name>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <description>
       Replaces Neow's 3rd option with an option to replace your starting deck with a predefined package.
     </description>
