@@ -37,6 +37,7 @@ public class SwapStartingDeckMod implements
 
     public static SpireConfig config;
     public static boolean crueltyMode = false;
+    public static boolean insanityMode = false;
 
     private static final Logger logger = Logger.getLogger(SwapStartingDeckMod.class.getName());
     private static final String MODNAME = "Swap Starting Deck Mod";
@@ -114,6 +115,7 @@ public class SwapStartingDeckMod implements
             config = new SpireConfig("SwapStartingDeckMod", "swapStartingDeckModConfig");
             config.load();
             crueltyMode = config.getBool("crueltyMode");
+            insanityMode = config.getBool("insanityMode");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -139,8 +141,27 @@ public class SwapStartingDeckMod implements
                         e.printStackTrace();
                     }
                 });
-
         panel.addUIElement(toggleCrueltyModeButton);
+
+        ModLabeledToggleButton toggleInsanityModeButton = new ModLabeledToggleButton("Enable Insanity Mode - Instead of 10 random commons, get 50 random cards.",
+                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                insanityMode,
+                panel,
+                (label) -> {
+                },
+                (button) -> {
+                    insanityMode = button.enabled;
+                    try {
+                        // And based on that boolean, set the settings and save them
+                        SpireConfig config = new SpireConfig("SwapStartingDeckMod", "swapStartingDeckModConfig");
+                        config.setBool("insanityMode", insanityMode);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+        panel.addUIElement(toggleInsanityModeButton);
+
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, panel);
 
         logger.info("Done loading badge Image and mod options");

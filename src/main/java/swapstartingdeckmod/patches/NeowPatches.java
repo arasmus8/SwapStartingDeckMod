@@ -40,16 +40,9 @@ public class NeowPatches {
         )
         public static SpireReturn Insert(NeowEvent _instance) {
             AbstractPlayer.PlayerClass chosenClass = AbstractDungeon.player.chosenClass;
-            if (
-                    chosenClass == AbstractPlayer.PlayerClass.IRONCLAD ||
-                            chosenClass == AbstractPlayer.PlayerClass.THE_SILENT ||
-                            chosenClass == AbstractPlayer.PlayerClass.DEFECT ||
-                            chosenClass == AbstractPlayer.PlayerClass.WATCHER
-            ) {
-                ArrayList<NeowReward> rewards;
-                rewards = (ArrayList<NeowReward>) ReflectionHacks.getPrivate(_instance, NeowEvent.class, "rewards");
-                rewards.set(2, new SwapReward());
-            }
+            ArrayList<NeowReward> rewards;
+            rewards = (ArrayList<NeowReward>) ReflectionHacks.getPrivate(_instance, NeowEvent.class, "rewards");
+            rewards.set(2, new SwapReward());
             return SpireReturn.Continue();
         }
 
@@ -101,7 +94,11 @@ public class NeowPatches {
             }
             Collections.shuffle(choices);
             ArrayList<AbstractCard> finalChoices = choices.stream().limit(2).collect(Collectors.toCollection(ArrayList::new));
-            finalChoices.add(new Chaos());
+            if (SwapStartingDeckMod.insanityMode) {
+                finalChoices.add(new Insanity());
+            } else {
+                finalChoices.add(new Chaos());
+            }
             return finalChoices;
         }
 

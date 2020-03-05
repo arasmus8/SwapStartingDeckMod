@@ -82,5 +82,9 @@
   "swapstartingdeckmod:Chaos": {
     "NAME": "Chaos",
     "DESCRIPTION": "10 random common cards"
+  },
+  "swapstartingdeckmod:Insanity": {
+    "NAME": "Insanity",
+    "DESCRIPTION": "50 random cards"
   }
 }
