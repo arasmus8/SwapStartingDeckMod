@@ -19,10 +19,12 @@ public class GoldToothPatches {
                 locator = GoldToothConstructorPatchLocator.class
         )
         public static void Insert(AbstractMonster _instance, String name, String id, @ByRef int[] maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imfUrl, float offsetX, float offsetY, boolean ignoreBlights) {
-            if (AbstractDungeon.player.hasRelic(GoldTooth.ID)) {
-                // double the health of all enemies
-                maxHealth[0] *= 2;
-                _instance.maxHealth = maxHealth[0];
+            if (AbstractDungeon.isPlayerInDungeon()) {
+                if (AbstractDungeon.player.hasRelic(GoldTooth.ID)) {
+                    // double the health of all enemies
+                    maxHealth[0] *= 2;
+                    _instance.maxHealth = maxHealth[0];
+                }
             }
         }
 
@@ -42,9 +44,11 @@ public class GoldToothPatches {
     )
     public static class SetHpPatch {
         public static void Postfix(AbstractMonster _instance, int minHp, int maxHp) {
-            if (AbstractDungeon.player.hasRelic(GoldTooth.ID)) {
-                _instance.currentHealth *= 2;
-                _instance.maxHealth = _instance.currentHealth;
+            if (AbstractDungeon.isPlayerInDungeon()) {
+                if (AbstractDungeon.player.hasRelic(GoldTooth.ID)) {
+                    _instance.currentHealth *= 2;
+                    _instance.maxHealth = _instance.currentHealth;
+                }
             }
         }
     }
