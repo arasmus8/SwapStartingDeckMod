@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.RunModStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import swapstartingdeckmod.relics.*;
 import swapstartingdeckmod.util.IDCheckDontTouchPls;
@@ -105,6 +106,27 @@ public class SwapStartingDeckMod implements
         logger.info("========================= /Swap Starting Deck Mod Initialized. Hello World./ =========================");
     }
 
+    @SuppressWarnings("unused")
+    public static void sideload() {
+        SwapStartingDeckMod mod = new SwapStartingDeckMod();
+        BaseMod.subscribe(mod, PostInitializeSubscriber.class);
+        BaseMod.subscribe(mod, EditRelicsSubscriber.class);
+        BaseMod.subscribe(mod, EditStringsSubscriber.class);
+    }
+
+    private void saveSettings() {
+        try {
+            // And based on that boolean, set the settings and save them
+            config = new SpireConfig("SwapStartingDeckMod", "swapStartingDeckModConfig");
+            config.load();
+            config.setBool("crueltyMode", crueltyMode);
+            config.setBool("insanityMode", insanityMode);
+            config.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void receivePostInitialize() {
         logger.info("Loading badge image and mod options");
@@ -132,14 +154,7 @@ public class SwapStartingDeckMod implements
                 },
                 (button) -> {
                     crueltyMode = button.enabled;
-                    try {
-                        // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("SwapStartingDeckMod", "swapStartingDeckModConfig");
-                        config.setBool("crueltyMode", crueltyMode);
-                        config.save();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    saveSettings();
                 });
         panel.addUIElement(toggleCrueltyModeButton);
 
@@ -151,14 +166,7 @@ public class SwapStartingDeckMod implements
                 },
                 (button) -> {
                     insanityMode = button.enabled;
-                    try {
-                        // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("SwapStartingDeckMod", "swapStartingDeckModConfig");
-                        config.setBool("insanityMode", insanityMode);
-                        config.save();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    saveSettings();
                 });
         panel.addUIElement(toggleInsanityModeButton);
 
@@ -173,6 +181,7 @@ public class SwapStartingDeckMod implements
         BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/SwapStartingDeckMod-Character-Strings.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/SwapStartingDeckMod-Relic-Strings.json");
         BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/SwapStartingDeckMod-Card-Strings.json");
+        BaseMod.loadCustomStringsFile(RunModStrings.class, getModID() + "Resources/localization/eng/SwapStartingDeckMod-Run-Mod-Strings.json");
         logger.info("Done editing strings");
     }
 
@@ -187,7 +196,7 @@ public class SwapStartingDeckMod implements
         BaseMod.addRelic(new DeadBlossom(), RelicType.SHARED);
         BaseMod.addRelic(new GoldTooth(), RelicType.SHARED);
 
-        // Mark relics as seen (the others are all starters so they're marked as seen in the character file
+        // Mark relics as seen
         UnlockTracker.markRelicAsSeen(Bellows.ID);
         UnlockTracker.markRelicAsSeen(BloodOffering.ID);
         UnlockTracker.markRelicAsSeen(CursedMarble.ID);

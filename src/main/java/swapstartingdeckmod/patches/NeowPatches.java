@@ -3,7 +3,6 @@ package swapstartingdeckmod.patches;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,15 +14,13 @@ import com.megacrit.cardcrawl.neow.NeowEvent;
 import com.megacrit.cardcrawl.neow.NeowReward;
 import javassist.CtBehavior;
 import swapstartingdeckmod.SwapStartingDeckMod;
-import swapstartingdeckmod.choices.*;
 import swapstartingdeckmod.relics.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.stream.Collectors;
 
 import static swapstartingdeckmod.patches.CustomNeowRewardDrawback.*;
 import static swapstartingdeckmod.patches.CustomNeowRewardType.SWAP_STARTING_DECK;
+import static swapstartingdeckmod.util.SwapOptionsHelper.getChoices;
 
 public class NeowPatches {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("swapstartingdeckmod:SwapStartingDeckNeow");
@@ -60,47 +57,6 @@ public class NeowPatches {
             method = "activate"
     )
     public static class NeowRewardActivatePatch {
-        private static ArrayList<AbstractCard> getChoices() {
-            ArrayList<AbstractCard> choices = new ArrayList<>();
-            switch (AbstractDungeon.player.getCardColor()) {
-                case RED:
-                    choices.add(new Berserker());
-                    choices.add(new Uproar());
-                    choices.add(new Fortification());
-                    choices.add(new Impermanence());
-                    choices.add(new Pyromancer());
-                    break;
-                case GREEN:
-                    choices.add(new Acrobat());
-                    choices.add(new Lacerator());
-                    choices.add(new Alchemist());
-                    choices.add(new Strategist());
-                    choices.add(new Ninja());
-                    break;
-                case BLUE:
-                    choices.add(new Battery());
-                    choices.add(new IceAge());
-                    choices.add(new Thunderstruck());
-                    choices.add(new RogueAI());
-                    choices.add(new Technologist());
-                    break;
-                case PURPLE:
-                    choices.add(new Dancer());
-                    choices.add(new Visionary());
-                    choices.add(new NorthStar());
-                    choices.add(new Enlightenment());
-                    choices.add(new Creation());
-                    break;
-            }
-            Collections.shuffle(choices);
-            ArrayList<AbstractCard> finalChoices = choices.stream().limit(2).collect(Collectors.toCollection(ArrayList::new));
-            if (SwapStartingDeckMod.insanityMode) {
-                finalChoices.add(new Insanity());
-            } else {
-                finalChoices.add(new Chaos());
-            }
-            return finalChoices;
-        }
 
         public static SpireReturn Prefix(NeowReward _instance) {
             if (_instance.type != SWAP_STARTING_DECK) {
@@ -112,7 +68,7 @@ public class NeowPatches {
             if (_instance.drawback == LOSE_HALF_LIFE) {
                 AbstractDungeon.player.damage(new DamageInfo(null, AbstractDungeon.player.currentHealth / 2, DamageInfo.DamageType.HP_LOSS));
             } else if (_instance.drawback == LOSE_QUARTER_MAX_LIFE) {
-                int maxLifeLoss = (int)((float)AbstractDungeon.player.maxHealth * 0.25F);
+                int maxLifeLoss = (int) ((float) AbstractDungeon.player.maxHealth * 0.25F);
                 AbstractDungeon.player.decreaseMaxHealth(maxLifeLoss);
             } else if (_instance.drawback == REDUCE_DRAW) {
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, new CursedMarble());
@@ -161,12 +117,12 @@ public class NeowPatches {
                     case 0:
                         drawback = LOSE_HALF_LIFE;
                         int damage = AbstractDungeon.player.currentHealth / 2;
-                        optionLabel = "" + NEOW_TEXT[0]  + damage + NEOW_TEXT[8];
+                        optionLabel = "" + NEOW_TEXT[0] + damage + NEOW_TEXT[8];
                         break;
                     case 1:
                         drawback = LOSE_QUARTER_MAX_LIFE;
-                        int maxLifeLoss = (int)((float)AbstractDungeon.player.maxHealth * 0.25F);
-                        optionLabel = "" + NEOW_TEXT[1]  + maxLifeLoss + NEOW_TEXT[9];
+                        int maxLifeLoss = (int) ((float) AbstractDungeon.player.maxHealth * 0.25F);
+                        optionLabel = "" + NEOW_TEXT[1] + maxLifeLoss + NEOW_TEXT[9];
                         break;
                     case 2:
                         drawback = ETHEREAL_CARDS;
