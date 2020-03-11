@@ -4,9 +4,15 @@
     <groupId>com.megacrit.cardcrawl.mod</groupId>
     <artifactId>SwapStartingDeckMod</artifactId>
     <name>Swap Starting Deck Mod</name>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <description>
-      Replaces Neow's 3rd option with an option to replace your starting deck with a predefined package.
+        Replaces Neow's 3rd option with an option to swap your starting deck for either random cards or a predefined package of cards.
+
+        There is also a modifier for custom runs that will let you swap without penalty at the start of the game.
+
+        Each character in the base game has 5 packages defined. You can choose between 2 of them, or a random set of 10 common cards. Custom characters from other mods will only have the option of 10 random common cards.
+
+        If things are too easy for you, head to the mod settings panel from the main menu and enable Cruelty Mode, where the drawbacks are extremely severe. Alternatively, enable Insanity mode to start with 50 random cards instead of 10 random common cards.
     </description>
 
     <properties>

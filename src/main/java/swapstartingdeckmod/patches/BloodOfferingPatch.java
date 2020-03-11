@@ -16,7 +16,7 @@ public class BloodOfferingPatch {
     )
     public static class CalculateDamagePatch {
         @SpireInsertPatch(
-                locator = CalcualteDamagePatchLocator.class,
+                locator = CalculateDamagePatchLocator.class,
                 localvars = {"tmp"}
         )
         public static void Insert(AbstractMonster _instance, int dmg, @ByRef float[] tmp) {
@@ -26,7 +26,7 @@ public class BloodOfferingPatch {
             }
         }
 
-        private static class CalcualteDamagePatchLocator extends SpireInsertLocator {
+        private static class CalculateDamagePatchLocator extends SpireInsertLocator {
             @Override
             public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(Settings.class, "isEndless");
