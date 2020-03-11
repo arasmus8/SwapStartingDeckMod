@@ -22,12 +22,12 @@ public class CursedMarble extends CustomRelic {
 
     @Override
     public void onEquip() {
-        AbstractDungeon.player.masterHandSize -= 1;
+        AbstractDungeon.player.masterHandSize -= 2;
     }
 
     @Override
     public void onUnequip() {
-        AbstractDungeon.player.masterHandSize += 1;
+        AbstractDungeon.player.masterHandSize += 2;
     }
 
     @Override

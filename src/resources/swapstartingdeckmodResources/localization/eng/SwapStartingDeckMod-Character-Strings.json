@@ -9,7 +9,7 @@
       "[ #rMax #rHP #ris #r1 ",
       "[ #rEnemies #rdeal #rdouble #rdamage ",
       "[ #rEnemies #rhave #rdouble #rHP ",
-      "[ #rDraw #r1 #rfewer #rcard ",
+      "[ #rDraw #r2 #rfewer #rcards ",
       " #rdamage ",
       " #rMax #rHP ",
       "#gSwap #gyour #gstarting #gdeck.]",

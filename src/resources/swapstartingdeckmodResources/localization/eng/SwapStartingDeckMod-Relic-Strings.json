@@ -17,7 +17,7 @@
     "NAME": "Cursed Marble",
     "FLAVOR": "Be careful what you wish for.",
     "DESCRIPTIONS": [
-      "Draw 1 fewer card each turn."
+      "Draw 2 fewer cards each turn."
     ]
   },
   "swapstartingdeckmod:BloodOffering": {
